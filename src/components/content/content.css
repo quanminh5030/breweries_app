@@ -1,0 +1,84 @@
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 40px;
+}
+
+.card {
+  background-color: white;
+  width: 15rem;
+  position: relative;
+}
+
+.basicInfo {
+  padding-left: 15px;
+  margin-bottom: 70px;
+}
+
+.linkDetails {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 6px;
+  background-color: #ccae6e;
+}
+
+.linkDetails a {
+  text-decoration: none;
+  color: black;
+}
+
+.linkDetails a:hover {
+  color: #725448;
+}
+
+.pagination {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.breweryCard {
+  margin: 0 30%;
+  background-color: rgb(216, 209, 209);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCard {
+  background-color: #725448;
+  height: 100vh;
+  padding: 3rem 10px;
+}
+
+.breweryCard button {
+  background-color: #ccae6e;
+  margin: 40px 0 60px;
+}
+
+.breweryCard button:hover {
+  background: #725448;
+}
+
+@media screen and (max-width: 1740px) {
+  .card {
+    width: 26rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .breweryCard {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .breweryCard {
+    margin: 0;
+  }
+}

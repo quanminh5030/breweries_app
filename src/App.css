@@ -1,0 +1,18 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  background-color: #725448;
+  height: 100vh;
+  padding: 3rem 10px;
+}
+
+@media screen and (max-width: 1350px) {
+  .container {
+    height: 100%;
+  }
+}
