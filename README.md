@@ -1,10 +1,16 @@
 # About the project
 The project is a pre-assignment from Integrify Oy. 
 
-# Demo
+## Demo
 https://breweries-site.netlify.app/
 
-# Installation instructions
+## Technologies
+* React
+* React-router
+* Mui-ui
+* Axios
+
+## Installation instructions
 First clone this repository
 
 ```bash
