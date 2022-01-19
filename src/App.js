@@ -1,36 +1,21 @@
-import React, { useEffect, useState } from "react";
-import './App.css';
-import Content from "./components/content/Content";
-import Header from "./components/header/Header";
-import breweryService from "./services/breweriesServices";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import BreweryDetailsCard from './components/content/BreweryDetailsCard';
+import Home from "./components/Home";
 
 function App() {
-  const [breweries, setBreweries] = useState([]); //to store initial data
-  const [filteredBreweries, setFilterBreweries] = useState([]); //to store filter data
-
-  useEffect(() => {
-    breweryService.getAllBreweries()
-      .then(data => {
-        setBreweries(data);
-        setFilterBreweries(data);
-      })
-      .catch(err => console.error(err))
-  }, []);
-
-  const handleSearch = userInput => {
-    //filter based on initial data
-    let filteredBreweries = breweries.filter(item => {
-      return Object.values(item).join('').toLowerCase().includes(userInput.toLowerCase());
-    })
-
-    setFilterBreweries(filteredBreweries);
-  }
 
   return (
-    <div className="container">
-      <Header handleSearch={handleSearch} />
-      <Content breweries={filteredBreweries} />
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/breweries/:breweryId' element={<BreweryDetailsCard />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -12,7 +12,7 @@ const BreweryBasicCard = ({ brewery }) => {
       </div>
 
       <div className='linkDetails'>
-        <Link to={`breweries/${brewery.id}`}>
+        <Link to={`/breweries/${brewery.id}`}>
           View Details
         </Link>
       </div>

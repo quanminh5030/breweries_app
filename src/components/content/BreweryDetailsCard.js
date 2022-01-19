@@ -1,8 +1,7 @@
 import { Button } from '@mui/material';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Oval from 'react-loading-icons/dist/components/oval';
 import { useNavigate, useParams } from 'react-router-dom'
-import { useEffect } from 'react/cjs/react.development';
 import breweryService from '../../services/breweriesServices';
 import './content.css';
 
@@ -11,6 +10,8 @@ const BreweryDetailsCard = () => {
   let navigate = useNavigate();
 
   const [brewery, setBrewery] = useState({});
+
+  console.log(breweryId);
 
   useEffect(() => {
     breweryService.getBreweryById(breweryId)
